@@ -33,3 +33,4 @@ IP-CIDR,208.67.220.220/32,no-resolve
 # 国内外访
 DOMAIN-SUFFIX,wnacg.com
 DOMAIN-SUFFIX,mikanani.me
+DOMAIN-SUFFIX,maying.co
