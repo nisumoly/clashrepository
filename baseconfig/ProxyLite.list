@@ -26,6 +26,7 @@ DOMAIN-SUFFIX,pocketcasts.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,filesb.soundon.fm
 DOMAIN-SUFFIX,buzzsprout.com
+DOMAIN-SUFFIX,rss.soundon.fm
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve
 IP-CIDR,1.1.1.1/32,no-resolve
