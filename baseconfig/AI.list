@@ -1,26 +1,78 @@
-# 内容：OpenAi Bard anthropic
-# 域名关键字匹配
+# ===================================================
+# 完整 AI 服务综合分流规则 (OpenAI/ChatGPT, Claude, Gemini, Cursor 等)
+# 包含：主站、API 接口、静态 CDN、人机验证/Turnstile 及支付接口
+# ===================================================
+
+# ----------------- 1. 域名关键字匹配 (KEYWORD) -----------------
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,Claude
-# 域名后缀匹配
-DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,midjourney
+DOMAIN-KEYWORD,sora
+
+# ----------------- 2. OpenAI / ChatGPT / Sora 专区 (含完整防拦截补全) -----------------
+DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,pay.openai.com
+
+# ----------------- 3. Anthropic / Claude 专区 -----------------
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.usercontent.com
+
+# ----------------- 4. Google Gemini / Bard / AI Studio -----------------
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+
+# ----------------- 5. AI 编辑器 & 编程助手 (Cursor / Copilot) -----------------
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,todesktop.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,copilot.microsoft.com
+
+# ----------------- 6. 其他主流 AI 产品 -----------------
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,ideogram.ai
+DOMAIN-SUFFIX,elevenlabs.io
+
+# ----------------- 7. AI 核心底层依赖 (登录/人机验证/统计/支付) -----------------
+# 登录认证 & Cloudflare 验证 (解决人机验证循环)
 DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,turnstile.cloudflare.com
+
+# 人机拼图与验证码 (OpenAI / Claude 重度依赖)
 DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,arkoselabs.com
+
+# 统计、功能开关与日志 (防止无法正常加载网页功能)
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,identrust.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,algolia.net
+
+# 订阅与支付服务
 DOMAIN-SUFFIX,stripe.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai.com
