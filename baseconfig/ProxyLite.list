@@ -1,61 +1,192 @@
-# 代理补充列表
+# ===================================================
+# 个人代理补充规则列表 (全量终极汇总版)
+# 包含：DNS、播客、ACG同人/Pixiv、Z-Lib、CDN、验证安全、社交/YouTube
+# ===================================================
 
-# 域名后缀匹配
-DOMAIN-SUFFIX,qichiyu.com
-
-# 域名关键字匹配
+# ----------------- 1. 域名关键字匹配 (KEYWORD) -----------------
 DOMAIN-KEYWORD,1e100
+DOMAIN-KEYWORD,pixiv
+DOMAIN-KEYWORD,z-library
+DOMAIN-KEYWORD,youtube
+DOMAIN-KEYWORD,twitter
 
-# IP段匹配
-IP-CIDR,142.171.133.131/32,no-resolve
-IP-CIDR,103.115.43.2/32,no-resolve
-
-# 国外DNS
-DOMAIN-SUFFIX,dns.google
-DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
-DOMAIN-SUFFIX,dot.sb
-DOMAIN-SUFFIX,dns.umbrella.com
-DOMAIN-SUFFIX,dns.quad9.net
+# ----------------- 2. 国外公共 DNS / DoH / DoT -----------------
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
+DOMAIN-SUFFIX,dot.sb
 DOMAIN-SUFFIX,doh.dns.sb
+DOMAIN-SUFFIX,hk-hkg.doh.sb
+DOMAIN-SUFFIX,dns.umbrella.com
 DOMAIN-SUFFIX,doh.opendns.com
 DOMAIN-SUFFIX,dns.quad9.net
-DOMAIN-SUFFIX,hk-hkg.doh.sb
+DOMAIN-SUFFIX,dns.adguard-dns.com
+DOMAIN-SUFFIX,nextdns.io
+
+# ----------------- 3. 播客 & 媒体托管 (Podcast / Media) -----------------
 DOMAIN-SUFFIX,pocketcasts.com
-DOMAIN-SUFFIX,cloudfront.net
-DOMAIN-SUFFIX,filesb.soundon.fm
 DOMAIN-SUFFIX,buzzsprout.com
+DOMAIN-SUFFIX,filesb.soundon.fm
 DOMAIN-SUFFIX,rss.soundon.fm
+DOMAIN-SUFFIX,podbean.com
+DOMAIN-SUFFIX,libsyn.com
+DOMAIN-SUFFIX,castos.com
+DOMAIN-SUFFIX,anchor.fm
+DOMAIN-SUFFIX,overcast.fm
+DOMAIN-SUFFIX,acast.com
+DOMAIN-SUFFIX,megaphone.fm
+DOMAIN-SUFFIX,simplecast.com
+DOMAIN-SUFFIX,transistor.fm
+DOMAIN-SUFFIX,rss.com
+DOMAIN-SUFFIX,fireside.fm
+DOMAIN-SUFFIX,fm-cdn.com
+
+# ----------------- 4. 漫画、同人 & 动漫资源站 (Pixiv, DLsite, 蜜柑, 漫画柜等) -----------------
+# Pixiv & 衍生/画师平台（含登录与图片 CDN）
+DOMAIN-SUFFIX,pixiv.net
+DOMAIN-SUFFIX,pixiv.org
+DOMAIN-SUFFIX,pixiv.co.jp
+DOMAIN-SUFFIX,pixiv.me
+DOMAIN-SUFFIX,pixiv.cat
+DOMAIN-SUFFIX,pximg.net
+DOMAIN-SUFFIX,booth.pm
+DOMAIN-SUFFIX,fanbox.cc
+DOMAIN-SUFFIX,ads-pixiv.net
+DOMAIN-SUFFIX,pixiv.help
+DOMAIN-SUFFIX,pixiv.sketch
+
+# 同人贩售 / ACG / 漫画 & 动漫资源站
+DOMAIN-SUFFIX,dlsite.com
+DOMAIN-SUFFIX,toranoana.jp
+DOMAIN-SUFFIX,toranoana.asia
+DOMAIN-SUFFIX,mangadex.org
+DOMAIN-SUFFIX,mikanani.me
+DOMAIN-SUFFIX,manhuagui.com
+DOMAIN-SUFFIX,mhgui.com
+DOMAIN-SUFFIX,cf.mhgui.com
+DOMAIN-SUFFIX,tw.manhuagui.com
+DOMAIN-SUFFIX,dm5.com
+DOMAIN-SUFFIX,wnacg.com
+DOMAIN-SUFFIX,wnacg.org
+DOMAIN-SUFFIX,aicomic.org
+DOMAIN-SUFFIX,nhentai.net
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,hitomi.la
+
+# Z-Library 官方域名全集 (含官方镜像、Singlelogin 与 CDN，已剔除诈骗域名)
 DOMAIN-SUFFIX,z-library.sk
+DOMAIN-SUFFIX,z-library.rs
+DOMAIN-SUFFIX,z-library.do
+DOMAIN-SUFFIX,z-library.gl
+DOMAIN-SUFFIX,z-lib.gs
+DOMAIN-SUFFIX,z-lib.is
+DOMAIN-SUFFIX,z-lib.fm
+DOMAIN-SUFFIX,z-lib.cx
+DOMAIN-SUFFIX,z-lib.gd
+DOMAIN-SUFFIX,zlib.cx
+DOMAIN-SUFFIX,zlibcdn.com
+DOMAIN-SUFFIX,singlelogin.re
+DOMAIN-SUFFIX,singlelogin.rs
+DOMAIN-SUFFIX,singlelogin.me
+DOMAIN-SUFFIX,1lib.sk
+DOMAIN-SUFFIX,b-ok.cc
+
+# ----------------- 5. 验证码、防风控 & 身份认证 (Captcha / SSO / 2FA) -----------------
+# 人机验证与无感安全防护
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,funcaptcha.com
+DOMAIN-SUFFIX,geetest.com
+DOMAIN-SUFFIX,geetest.com.cn
+DOMAIN-SUFFIX,aws-captcha.com
+
+# 通行证认证与单点登录 (OAuth / SSO)
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,okta.com
+DOMAIN-SUFFIX,oktadeveloper.com
+DOMAIN-SUFFIX,firebaseapp.com
+DOMAIN-SUFFIX,accounts.google.com
+DOMAIN-SUFFIX,appleid.apple.com
+
+# 短信验证码底层 API 与 2FA
+DOMAIN-SUFFIX,twilio.com
+DOMAIN-SUFFIX,authy.com
+DOMAIN-SUFFIX,duosecurity.com
+DOMAIN-SUFFIX,vonage.com
+DOMAIN-SUFFIX,nexmo.com
+
+# ----------------- 6. 公共库 & 前端 CDN -----------------
+DOMAIN-SUFFIX,cdnjs.cloudflare.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,unpkg.com
+DOMAIN-SUFFIX,fastly.net
+DOMAIN-SUFFIX,statically.io
+
+# ----------------- 7. 国外主流社交媒体 & YouTube -----------------
+# YouTube
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtubei.googleapis.com
+
+# X / Twitter
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,t.co
+
+# Meta (Instagram / Facebook / Threads)
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,messenger.com
+
+# Telegram / Reddit / Discord / Twitch
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,ttvnw.net
+
+# ----------------- 8. 其它特定域名 -----------------
+DOMAIN-SUFFIX,qichiyu.com
+DOMAIN-SUFFIX,maying.co
+DOMAIN-SUFFIX,jrsbxj.com
+DOMAIN-SUFFIX,nameless13.com
+DOMAIN-SUFFIX,lolico-my.sharepoint.com
+
+# ----------------- 9. 指定 IP / IP 段 (带 no-resolve 防 DNS 污染) -----------------
+# 国外 DNS IP
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve
 IP-CIDR,1.1.1.1/32,no-resolve
 IP-CIDR,1.0.0.1/32,no-resolve
+IP-CIDR,9.9.9.9/32,no-resolve
+IP-CIDR,149.112.112.112/32,no-resolve
 IP-CIDR,185.222.222.222/32,no-resolve
 IP-CIDR,208.67.222.222/32,no-resolve
 IP-CIDR,208.67.220.220/32,no-resolve
 
-# 国内外访
-DOMAIN-SUFFIX,wnacg.com
-DOMAIN-SUFFIX,mikanani.me
-DOMAIN-SUFFIX,maying.co
-DOMAIN-SUFFIX,jrsbxj.com
-DOMAIN-SUFFIX,lolico-my.sharepoint.com
-DOMAIN-SUFFIX,cdnjs.cloudflare.com
-DOMAIN-SUFFIX,recaptcha.net
-DOMAIN-SUFFIX,ads-pixiv.net
-DOMAIN-SUFFIX,booth.pm
-DOMAIN-SUFFIX,fanbox.cc
-DOMAIN-SUFFIX,pixiv.cat
-DOMAIN-SUFFIX,pixiv.co.jp
-DOMAIN-SUFFIX,pixiv.me
-DOMAIN-SUFFIX,pixiv.net
-DOMAIN-SUFFIX,pixiv.org
-DOMAIN-SUFFIX,pximg.net
-DOMAIN-SUFFIX,nameless13.com
-DOMAIN-SUFFIX,cf.mhgui.com
-DOMAIN-SUFFIX,mhgui.com
-DOMAIN-SUFFIX,manhuagui.com
-DOMAIN-SUFFIX,aicomic.org
-
+# 特定服务器 IP
+IP-CIDR,142.171.133.131/32,no-resolve
+IP-CIDR,103.115.43.2/32,no-resolve
